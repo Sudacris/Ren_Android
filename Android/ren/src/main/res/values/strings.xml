@@ -1,0 +1,73 @@
+<resources>
+    <!-- Android Manifest Strings -->
+    <string name="app_name">Ren</string>
+
+    <!-- NavigationDrawer Strings -->
+    <string name="draw_open">Navigation Open</string>
+    <string name="draw_close">Navigation Close</string>
+    <string name="name">name</string>
+    <string name="email">email</string>
+    <string name="phone">phone</string>
+    <string name="facebook">numeric ID</string>
+    <string name="instagram">Instagram Username</string>
+    <string name="website">website</string>
+    <string name="about_me">about me</string>
+    <string name="account">Account</string>
+    <string name="logout">Logout</string>
+    <string name="update_profile">Update</string>
+    <!-- Tabs -->
+    <string-array name="tabs">
+        <item>Received</item>
+        <item>SAVED</item>
+        <item>Home</item>
+        <item>My Card</item>
+    </string-array>
+    <!-- On Off -->
+    <string name="on_off_button">On/Off</string>
+    <string name="enter_name">Name can\'t be empty</string>
+
+    <!-- Card details activity -->
+    <string name="card_details">Card Detail</string>
+    <string name="title_activity_card_detail">Card Detail Activity</string>
+
+    <!-- Notification -->
+    <string name="exchange_started">Exchanging started</string>
+    <string name="currently_exchanging">Exchanging cards</string>
+
+    <!-- Card Details -->
+    <string name="about_me_detail">About Me:</string>
+    <string name="instagram_not_found">Instagram not found</string>
+    <string name="facebook_not_found">Facebook not found</string>
+    <string name="card_removed">Removed</string>
+
+    <!-- Log In -->
+    <string name="log_in">Log In</string>
+    <string name="log_in_uname">User Name</string>
+    <string name="log_in_password">Password</string>
+    <string name="log_in_new_user">New User</string>
+    <string name="log_in_register">Register</string>
+    <string name="enter_uname">Please enter a user name</string>
+    <string name="enter_password">Please enter a password</string>
+    <string name="log_in_success">Logged in</string>
+    <string name="log_in_fail">Wrong username or password</string>
+    <string name="new_account_created">Account created</string>
+    <string name="usr_name_in_use">User name already exists</string>
+    <!-- Location -->
+    <string name="location_disabled">Enable location service</string>
+    <string name="location_updating">Requesting location...</string>
+
+    <!-- Ignore Dialog -->
+    <string name="ignore_dialog_title"> Ignore User </string>
+    <string name="ignore_dialog_message"> Are you sure you want to ignore?</string>
+
+    <!--Social Media Label-->
+    <string name="social_media_label">Add Profiles to Card</string>
+    <!--Facebook-->
+    <string name="facebook_app_id">310206512645519</string>
+    <string name="facebook_activity_name">Facebook Login</string>
+    <string name="facebook_remove_profile">Remove Facebook Profile</string>
+    <string name="facebook_help_dialog_title">Why do I need to login to Facebook?</string>
+    <string name="facebook_help_dialog_msg">Ren uses your Facebook login credentials to read your Facebook user ID. With this Information, we can link your profile to your card. Ren does not track your Facebook activity or store your login credentials.</string>
+    <string name="empty_str"></string>
+
+</resources>
