@@ -36,12 +36,12 @@ public class BackgroundConn extends AsyncTask<String, Void, String> {
     private static String myLocationStr;
     // Strings to use for calling background conn
     public static final String OBTAIN_SAVED_USERS = "get_saved_users",
-                                SAVE_USER_STR = "save_user",
-                                REMOVE_USER_STR = "remove_user";
+            SAVE_USER_STR = "save_user",
+            REMOVE_USER_STR = "remove_user";
 
     // Strings used to identify json object
     private final String    SAVED_USERS_JSON_STR = "saved users",
-                            NEARBY_USERS_JSON_STR = "nearby users";
+            NEARBY_USERS_JSON_STR = "nearby users";
 
     BackgroundConn(Context ctx) {
         context = ctx;
@@ -61,14 +61,14 @@ public class BackgroundConn extends AsyncTask<String, Void, String> {
 //        String save_user_url = "http://hero.x10host.com/save_user.php";
 //        String remove_user_url = "http://hero.x10host.com/remove_user.php";
 
-        String login_url = "http://senteapps.x10host.com/login.php";
-        String register_url = "http://senteapps.x10host.com/register.php";
-        String updateGPS_and_connect_url = "http://senteapps.x10host.com/updateAndConnect.php";
-        String updateGPS_url = "http://senteapps.x10host.com/updateGPS.php";
-        String profile_update_url = "http://senteapps.x10host.com/profile_update.php";
-        String obtain_saved_user_url = "http://senteapps.x10host.com/saved_user_list.php";
-        String save_user_url = "http://senteapps.x10host.com/save_user.php";
-        String remove_user_url = "http://senteapps.x10host.com/remove_user.php";
+        String login_url = "http://zhengzhizhou.x10host.com/login.php";
+        String register_url = "http://zhengzhizhou.x10host.com/register.php";
+        String updateGPS_and_connect_url = "http://zhengzhizhou.x10host.com/updateAndConnect.php";
+        String updateGPS_url = "http://zhengzhizhou.x10host.com/updateGPS.php";
+        String profile_update_url = "http://zhengzhizhou.x10host.com/profile_update.php";
+        String obtain_saved_user_url = "http://zhengzhizhou.x10host.com/saved_user_list.php";
+        String save_user_url = "http://zhengzhizhou.x10host.com/save_user.php";
+        String remove_user_url = "http://zhengzhizhou.x10host.com/remove_user.php";
 
         //above string is ur local wamp server address. To access local server from other devices u have to make changes in WAMP
         //apache httpd.conf file.
@@ -425,6 +425,7 @@ public class BackgroundConn extends AsyncTask<String, Void, String> {
             }
             // Auto populate
         } else if (result.contains("login failed")) {
+            LogInActivity.setIsLoggingIn(false);
             Toast.makeText(context, context.getString(R.string.log_in_fail), Toast.LENGTH_SHORT).show();
         } else if (result.contains("Login account created.")) {
             //Log.e(TAG, "Account created.");
@@ -494,7 +495,7 @@ public class BackgroundConn extends AsyncTask<String, Void, String> {
                 );
 
                 if(MainActivity.DEBUG) { Log.e( TAG, nearbyUserCard.getUname() + "-> " + ((nearbyUserCard.getmPhotoEncoded().getBytes().length)/1000) + "kb");
-                                        }
+                }
                 SyncService.addNewCard( nearbyUserCard );
 
             } catch( JSONException e ) { Log.e("bconn", "Json Error"); }

@@ -38,11 +38,12 @@ public class HelpDialogButtonView extends Button implements View.OnClickListener
 
         buildAlertDialog();
         setOnClickListener(this);
+
     }
 
     private void buildAlertDialog()
     {
-           AlertDialog.Builder b = new AlertDialog.Builder(context, R.style.AppCompatAlertDialogStyle);
+        AlertDialog.Builder b = new AlertDialog.Builder(context, R.style.AppCompatAlertDialogStyle);
         // Create custom title if drawable exists
 
         b.setTitle(dialogTitleStr);

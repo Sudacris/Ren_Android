@@ -69,18 +69,18 @@
         android:textSize="13sp" />
 
     <!--<TextView-->
-        <!--android:id="@+id/detail_website"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_alignLeft="@id/detail_name"-->
-        <!--android:layout_alignStart="@id/detail_name"-->
-        <!--android:layout_below="@id/detail_email"-->
-        <!--android:layout_toEndOf="@+id/detail_photo"-->
-        <!--android:layout_toRightOf="@+id/detail_photo"-->
-        <!--android:autoLink="web"-->
-        <!--android:padding="2dp"-->
-        <!--android:textColor="@color/colorText"-->
-        <!--android:textSize="13sp" />-->
+    <!--android:id="@+id/detail_website"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignLeft="@id/detail_name"-->
+    <!--android:layout_alignStart="@id/detail_name"-->
+    <!--android:layout_below="@id/detail_email"-->
+    <!--android:layout_toEndOf="@+id/detail_photo"-->
+    <!--android:layout_toRightOf="@+id/detail_photo"-->
+    <!--android:autoLink="web"-->
+    <!--android:padding="2dp"-->
+    <!--android:textColor="@color/colorText"-->
+    <!--android:textSize="13sp" />-->
 
     <ImageButton
         android:id="@+id/detail_facebook"
@@ -111,17 +111,17 @@
         android:visibility="gone" />
 
     <!--<ImageButton-->
-        <!--android:id="@+id/detail_wechat"-->
-        <!--android:layout_width="45dp"-->
-        <!--android:layout_height="45dp"-->
-        <!--android:layout_below="@id/detail_website"-->
-        <!--android:layout_margin="3dp"-->
-        <!--android:layout_toEndOf="@+id/detail_instagram"-->
-        <!--android:layout_toRightOf="@+id/detail_instagram"-->
-        <!--android:background="@null"-->
-        <!--android:scaleType="centerInside"-->
-        <!--android:src="@drawable/wechatcolor"-->
-        <!--android:visibility="gone" />-->
+    <!--android:id="@+id/detail_wechat"-->
+    <!--android:layout_width="45dp"-->
+    <!--android:layout_height="45dp"-->
+    <!--android:layout_below="@id/detail_website"-->
+    <!--android:layout_margin="3dp"-->
+    <!--android:layout_toEndOf="@+id/detail_instagram"-->
+    <!--android:layout_toRightOf="@+id/detail_instagram"-->
+    <!--android:background="@null"-->
+    <!--android:scaleType="centerInside"-->
+    <!--android:src="@drawable/wechatcolor"-->
+    <!--android:visibility="gone" />-->
 
     <TextView
         android:id="@+id/detail_aboutme"

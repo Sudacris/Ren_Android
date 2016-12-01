@@ -36,7 +36,7 @@ public class SyncService extends Service {
 
     private static Context context;
     private static final int NOTIFICATION = 638;
-//    private static final int TEN_SECS = 10 * 1000 * 1; // Stop requesting
+    //    private static final int TEN_SECS = 10 * 1000 * 1; // Stop requesting
     private static final int TEN_MINS = 60 * 1000 * 10; // Stop requesting
     private static final int REQUESTINTERVAL = 1000 * 10; // Request server
     // Location significantly newer
@@ -67,7 +67,7 @@ public class SyncService extends Service {
     // Currently MT. EVEREST COORDINATES
     // +27.9878° N, +86.9250° E
     private final String    NULL_LATITUDE = "27.9878",
-                            NULL_LONGITUDE = "86.9250";
+            NULL_LONGITUDE = "86.9250";
 
     public SyncService() {
     }
@@ -104,7 +104,7 @@ public class SyncService extends Service {
     public static void setSavedUnameCardPairs(HashMap<String, Card> savedOnes) {
         if( tempRemovedUNameCardPairs.size() > 0 ) {
             for( String key : tempRemovedUNameCardPairs.keySet() ) {
-               savedOnes.remove( key );
+                savedOnes.remove( key );
             }
             tempRemovedUNameCardPairs.clear();
         }
@@ -170,12 +170,12 @@ public class SyncService extends Service {
         }
     }
 
-   /** Add card into ignoreUNameCardPairs
+    /** Add card into ignoreUNameCardPairs
      *
      * @param c is a card to add
      * @author Alvin Truong
      * @date   6/28/2016
-    */
+     */
     public static void addIgnoredCard( Card c ) {
         c.setmIgnored( true );
         ignoredUNameCardPairs.put( c.getUname(), c );

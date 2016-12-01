@@ -16,9 +16,9 @@ import android.view.ViewGroup;
 public class TabFragment extends Fragment implements CardAdapter.ClickListener {
     // Use this to determine which row layout to inflate
     public static final int RECEIVED_TAB_INT = 0,
-                            SAVED_TAB_INT = 1,
-                            HOME_TAB_INT = 2,
-                            MY_CARD_TAB_INT = 3;
+            SAVED_TAB_INT = 1,
+            HOME_TAB_INT = 2,
+            MY_CARD_TAB_INT = 3;
 //                            IGNORED_TAB_INT = 2;
 
     public static CardAdapter newReceivedCardAdapter;

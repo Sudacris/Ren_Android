@@ -3,7 +3,7 @@
     <!--<color name="previousPrimaryColor">#3F51B5</color>-->
     <!--<color name="previousPrimaryDark">#303F9F</color>-->
     <!-- Colors used by David's Initial design -->
-    <color name="colorAccent">#93c756</color>
+    <color name="colorAccent">#ffb25b</color>
     <color name="colorFragment">#303033</color>
     <color name="colorText">#989899</color>
     <color name="colorDottedBorder">#989899</color>
@@ -18,7 +18,6 @@
     <color name="appbarSecondaryTextColor">#555</color>
     <color name="appbarSliderColor">#FFFFFFFF</color>
     <color name="black">#000</color>
-
     <!-- Bottom App Bar Color -->
     <color name="bottomBarBGColor">#4a4a4a</color>
 </resources>

@@ -24,7 +24,7 @@ import java.util.HashMap;
 
 public class LogInActivity extends AppCompatActivity {
 
-    private boolean isLoggingIn = false;
+    private static boolean isLoggingIn = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +62,7 @@ public class LogInActivity extends AppCompatActivity {
                 String uName = editText.getText().toString();
                 editText = (EditText) findViewById(R.id.login_password);
                 String password = editText.getText().toString();
+                Boolean Pass = false;
                 if (uName.isEmpty()) {
                     Toast.makeText(getApplicationContext(), getString(R.string.enter_uname), Toast.LENGTH_LONG).show();
                     return;
@@ -72,12 +73,18 @@ public class LogInActivity extends AppCompatActivity {
                 }
                 // See whether to log in or register
                 if (checkBox.isChecked()) {
+
                     registerNewUser(uName, password);
                 } else {
                     logIn(uName, password);
                 }
             }
         });
+    }
+
+    public static void setIsLoggingIn(Boolean b)
+    {
+        isLoggingIn = b;
     }
 
     private void registerNewUser(String uName, String password) {
@@ -94,7 +101,7 @@ public class LogInActivity extends AppCompatActivity {
             BackgroundConn bckConn = new BackgroundConn(this);
 //        Log.e("LoginActivity", "Sending background login attempt");
             bckConn.execute("login", uName, password);
-            isLoggingIn = true;
+            setIsLoggingIn(true);
         }
 
     }
@@ -129,7 +136,7 @@ public class LogInActivity extends AppCompatActivity {
                 ((MyPagerAdapter) ContactsFragment.mTabs.get().getViewPager().getAdapter()).refreshTabs();
             }
 
-            isLoggingIn = false;
+            setIsLoggingIn(false);
             super.onBackPressed();
         }
     }

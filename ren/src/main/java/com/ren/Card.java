@@ -19,7 +19,7 @@ public class Card implements Serializable, Comparable<Card> {
     private String mEmail;
     private String mFacebook;
     private String mInstagram;
-//    private String mWebsite;
+    //    private String mWebsite;
     private String mOther;
     private String mGender;
     private boolean mSaved = false;

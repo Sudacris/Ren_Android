@@ -131,8 +131,8 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
         ImageView gender;
         TextView about;
         ImageButton starButton,
-                    ignoreButton;
-//                    unignoreButton;
+                ignoreButton;
+        //                    unignoreButton;
         View itemFrame;
         Card clickedCard;
 
@@ -179,14 +179,14 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
                 ignoreConfirmationBuilder.setTitle(R.string.ignore_dialog_title );
                 ignoreConfirmationBuilder.setMessage( R.string.ignore_dialog_message );
                 ignoreConfirmationBuilder.setPositiveButton( "Yes", new DialogInterface.OnClickListener() {
-                   @Override
+                    @Override
                     public void onClick( DialogInterface dialog, int id ) {
-                       SyncService.removeSaved(clickedCard);
-                       SyncService.removeReceivedCard(clickedCard);
+                        SyncService.removeSaved(clickedCard);
+                        SyncService.removeReceivedCard(clickedCard);
 
-                       // Ignore card
-                       SyncService.addIgnoredCard( clickedCard );
-                   }
+                        // Ignore card
+                        SyncService.addIgnoredCard( clickedCard );
+                    }
                 });
                 ignoreConfirmationBuilder.setNegativeButton( "No", new DialogInterface.OnClickListener() {
                     @Override

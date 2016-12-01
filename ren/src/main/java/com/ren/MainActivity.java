@@ -63,8 +63,8 @@ public class MainActivity extends AppCompatActivity {
     private final String MYCARD_TAB_TAG = "MYCARD_TAB_TAG";
 
     private final int   HOME_TAB_INDEX = 0,
-                        CONTACT_TAB_INDEX = 1,
-                        MY_CARD_TAB_INDEX = 2;
+            CONTACT_TAB_INDEX = 1,
+            MY_CARD_TAB_INDEX = 2;
 
     // Gender
     private enum Gender {
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         fbProfileTracker = new ProfileTracker(){
             @Override
             protected void onCurrentProfileChanged(Profile oldProfile, Profile currentProfile) {
-            // On logout or login of facebook update profile;
+                // On logout or login of facebook update profile;
                 if(DEBUG) { Log.e("MainActivity", "Profile Changed"); }
                 if( currentProfile != null )
                     updateProfileBasedOnNavDrawer();
@@ -147,7 +147,6 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(com.ren.R.menu.menu_main, menu);
         // Bind is finished at this time
         MenuItem mi = menu.getItem(0);
-
         // New Ren Icon for connect
         if (SyncService.serviceRunning) {
             mi.setIcon(R.drawable.ren_orange);
@@ -435,7 +434,7 @@ public class MainActivity extends AppCompatActivity {
                     ImageView currentTabImageView = (ImageView)bottomFragmentTabHost.getTabWidget().getChildAt(i).findViewById( R.id.icon );
                     switch( i ) {
                         case 0:
-                           currentTabImageView.setImageResource( R.drawable.home_tab_icon_white);
+                            currentTabImageView.setImageResource( R.drawable.home_tab_icon_white);
                             break;
                         case 1:
                             currentTabImageView.setImageResource( R.drawable.contacts_tab_icon_white);
@@ -611,7 +610,7 @@ public class MainActivity extends AppCompatActivity {
     private void selectImage()
     {
         Intent photoPickerIntent = new Intent(Intent.ACTION_PICK,
-                                              MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
 
         photoPickerIntent.setType("image/*");
         startActivityForResult(photoPickerIntent, PHOTO_SELECTED);
@@ -653,7 +652,7 @@ public class MainActivity extends AppCompatActivity {
         Profile fbProfile = Profile.getCurrentProfile();
         String fb = "";
         if( fbProfile != null )
-           fb = fbProfile.getId();
+            fb = fbProfile.getId();
 
         iet = (IconEditText) findViewById(R.id.instagram);
         String ig = "";
@@ -681,7 +680,7 @@ public class MainActivity extends AppCompatActivity {
         Log.e("GetMyCard", "uName is: "+uName);*/
         return new Card(uName, name, userGender.toString(), userPhotoStr,
 //                        phone, email, fb, ig, website, aboutMe);
-                        phone, email, fb, ig, aboutMe);
+                phone, email, fb, ig, aboutMe);
     }
 
     /**
